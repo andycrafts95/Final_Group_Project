@@ -1,0 +1,26 @@
+body{
+    background-color: #6667ab;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+.logoBox{
+    background-color: #6667ab;
+    display: flex;
+    justify-content: center;
+}
+#Logo{
+    height: 112px ;
+    width: 90px;
+}
+.filterbox{
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #6667ab;
+}
+.filterImage{
+    height: 125;
+    width: 260;
+    border-radius: 100px;
+}
