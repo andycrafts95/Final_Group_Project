@@ -8,6 +8,11 @@ h2 {
     color: #3a088f;
     font-family: Arial, Helvetica, sans-serif;
 }
+.profileBox{
+    background-color: #6667ab;
+    display: flex;
+    justify-content: center;
+}
 .footerContainer{
     height: 100px;
     display: flex;
