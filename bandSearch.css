@@ -1,0 +1,23 @@
+
+
+/* footer */
+h2 {
+    font-size: 14px;
+    color: #3a088f;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.footerContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.footerButton{
+    display: flex;
+    flex-direction: column ;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.footerImg{
+    height: 45px;
+}
