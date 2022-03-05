@@ -27,7 +27,7 @@ h3 {
 .scrolling-wrapper{
 	overflow-x: auto;
 	background-color: #6667ab;
-	
+
 }
 
 h1{
@@ -70,6 +70,7 @@ h2 {
     font-family: Arial, Helvetica, sans-serif;
 }
 .footerContainer{
+	border: none;
     height: 100px;
     display: flex;
     flex-direction: row;
