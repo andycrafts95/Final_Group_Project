@@ -7,6 +7,7 @@ body{
 	display: flex;
 	justify-content: center;
 	padding: 5%;
+	height: 15%;
 }
 .filterBox{
 	display: flex;
@@ -39,7 +40,7 @@ h1{
 }
 .container-fluid{
     background-color: #6667ab;
-    max-height: fit-content;
+    height: 77%;
 	padding-top: 5%;
 	padding-bottom: 5%;
 	padding-left: 5%;
@@ -81,7 +82,7 @@ h2 {
 }
 .footerContainer{
 	border: none;
-    height: 100px;
+    height: 8%;
     display: flex;
     flex-direction: row;
     justify-content: center;
