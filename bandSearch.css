@@ -4,7 +4,25 @@ body{
 }
 .filterSection{
     background-color: #6667ab;
+	display: flex;
+	justify-content: center;
+	padding: 5%;
 }
+.filterBox{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #3a088f;
+	border-radius: 100px;
+	width: 400px;
+	height: 100px;
+
+}
+h3 {
+	color: white;
+	font-size: 48px;
+}
+
 /* carousel */ 
 .scrolling-wrapper{
 	overflow-x: auto;
@@ -13,6 +31,7 @@ body{
 h1{
 	font-weight: 700;
 	font-size: 3.4em;
+	color: white;
 }
 
 .subtitle{
@@ -21,7 +40,7 @@ h1{
 }
 .container-fluid{
     background-color: #6667ab;
-    min-height: fit-content;
+    max-height: fit-content;
 }
 .card-block{
 	height: 300px;
@@ -104,6 +123,10 @@ h2 {
     display: flex;
     flex-direction: row;
     justify-content: center;
+	position: fixed;
+	left: 0%;
+	bottom: 0%;
+	width: 100%;
 }
 .footerButton{
     display: flex;
