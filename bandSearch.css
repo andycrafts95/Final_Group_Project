@@ -40,6 +40,10 @@ h1{
 .container-fluid{
     background-color: #6667ab;
     max-height: fit-content;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	padding-left: 5%;
+	padding-right: 5%;
 }
 .card-block{
 	max-height: 900px;
@@ -49,7 +53,7 @@ h1{
 	background-position: center;
 	background-size: cover;
 	transition: all 0.2s ease-in-out !important;
-	border-radius: 24px;}
+	border-radius: 15px;}
 
 	.cardblock:hover{
 		transform: translateY(-5px);
@@ -90,6 +94,9 @@ h2 {
 @media only screen and (max-width: 600px){
 	.cardImg{
 		height: 500px;
+	}
+	.container-fluid{
+		padding-bottom: 20% ;
 	}
 
 }
