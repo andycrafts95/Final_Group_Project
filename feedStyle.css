@@ -1,0 +1,52 @@
+body{
+    background-color: #6667ab;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+.feedBox{
+    background-color: #6667ab;
+    height: 92%;
+}
+.imageBox{
+    position: relative;
+    text-align: center;
+    color: aqua;
+}
+.UpperRightExit{
+    background-color: transparent;
+    height: 75px;
+    width: 500px;
+    position: absolute;
+    top: 10px;
+    right: 20%;
+    left:60%;
+}
+#feed-image{
+    height: 100%
+}
+/* footer */
+h2 {
+    font-size: 14px;
+    color: #3a088f;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.footerContainer{
+	border: none;
+    height: 8%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+	position: fixed;
+	left: 0%;
+	bottom: 0%;
+	width: 100%;
+}
+.footerButton{
+    display: flex;
+    flex-direction: column ;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.footerImg{
+    height: 45px;
+}
