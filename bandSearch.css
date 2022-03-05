@@ -27,15 +27,12 @@ h3 {
 .scrolling-wrapper{
 	overflow-x: auto;
 	background-color: #6667ab;
-
 }
-
 h1{
 	font-weight: 700;
 	font-size: 3.4em;
 	color: white;
 }
-
 .subtitle{
 	font-size: 1.25em;
 	opacity: 0.65;
@@ -60,7 +57,7 @@ h1{
 		opacity: 0.9;
 	} 
 .cardImg{
-	max-height: 800px;
+	height: 900px;
 	max-width: fit-content;
 }
 /* footer */
@@ -90,3 +87,11 @@ h2 {
 .footerImg{
     height: 45px;
 }
+@media only screen and (max-width: 600px){
+	.cardImg{
+		height: 500px;
+	}
+
+}
+
+	
