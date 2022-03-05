@@ -4,11 +4,25 @@ body{
 }
 .profileBox{
     background-color: #6667ab;
-    display: flex;
-    justify-content: center;
     height: 92%;
 }
-
+.imageBox{
+    position: relative;
+    text-align: center;
+    color: aqua;
+}
+.UpperRightExit{
+    background-color: transparent;
+    height: 75px;
+    width: 500px;
+    position: absolute;
+    top: 10px;
+    right: 20%;
+    left:60%;
+}
+#profile-image{
+    height: 100%
+}
 /* footer */
 h2 {
     font-size: 14px;
