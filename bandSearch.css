@@ -25,7 +25,7 @@ h3 {
 
 /* carousel */ 
 .scrolling-wrapper{
-	overflow-x: auto;
+	overflow-x: visible;
 	background-color: #6667ab;
 }
 h1{
@@ -46,9 +46,9 @@ h1{
 	padding-right: 5%;
 }
 .card-block{
-	max-height: 900px;
-	width:fit-content;
 	background-color: #6667ab;
+	max-height: 100%;
+	width:fit-content;
 	border: none;
 	background-position: center;
 	background-size: cover;
@@ -63,6 +63,15 @@ h1{
 .cardImg{
 	height: 900px;
 	max-width: fit-content;
+}
+.gapFill{
+	max-height: 500px;
+	max-width: 100%;
+}
+#gapFiller{
+	background-color: #6667ab;
+	width: 100%;
+	height: fit-content;
 }
 /* footer */
 h2 {
@@ -91,9 +100,10 @@ h2 {
 .footerImg{
     height: 45px;
 }
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 750px){
 	.cardImg{
-		height: 500px;
+		max-height: 400px;
+		max-width:200px;
 	}
 	.container-fluid{
 		padding-bottom: 20% ;
