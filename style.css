@@ -9,19 +9,23 @@ h1{
 }
 /* logo box */
 .logoBox{
+    height: 20%;
     background-color: #6667ab;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     color: white;
+    padding: 2%;
 }
 #Logo{
     max-height: 100% ;
     max-width: 100%;
+    padding: 1%;
 }
 /* search buttons */ 
 .filterBox{
+    height: 72%;
     padding: 5%;
     display: flex;
     flex-direction: column;
@@ -55,7 +59,7 @@ h2 {
 }
 .footerContainer{
 	border: none;
-    height: 100px;
+    height: 8%;
     display: flex;
     flex-direction: row;
     justify-content: center;
