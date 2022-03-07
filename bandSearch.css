@@ -26,7 +26,7 @@ h3 {
 
 /* carousel */ 
 .scrolling-wrapper{
-	overflow-x: visible;
+	overflow-x: auto;
 	background-color: #6667ab;
 }
 h1{
@@ -40,7 +40,7 @@ h1{
 }
 .container-fluid{
     background-color: #6667ab;
-    height: 77%;
+    height: 70%;
 	padding-top: 5%;
 	padding-bottom: 5%;
 	padding-left: 5%;
@@ -82,7 +82,7 @@ h2 {
 }
 .footerContainer{
 	border: none;
-    height: 8%;
+    height: 150px;
     display: flex;
     flex-direction: row;
     justify-content: center;
