@@ -24,11 +24,13 @@ h3 {
 	font-size: 48px;
 }
 
-/* carousel 
+/* carousel */
 .scrolling-wrapper{
 	overflow-x: auto;
+	overflow-y: hidden;
 	white-space: nowrap;
 	background-color: #6667ab;
+	-webkit-overflow-scrolling: touch;
 }
 h1{
 	font-weight: 700;
@@ -67,7 +69,7 @@ h1{
 	max-width: fit-content;
 }
 .gapFill{
-	max-height: 500px;
+	max-height: 40%px;
 	max-width: 100%;
 }
 #gapFiller{
@@ -75,8 +77,8 @@ h1{
 	width: 100%;
 	height: fit-content;
 }
-*/
-/* new carousel*/
+
+/* new carousel
 .carousel-item{
 	background-color: #6667ab;
 	display: flexbox;
@@ -96,7 +98,7 @@ h1{
 .bandImg{
 	height: 500px;	
 	width: 9;
-}
+} */
 /* footer */
 h2 {
     font-size: 14px;
@@ -126,7 +128,7 @@ h2 {
 }
 @media only screen and (max-width: 750px){
 	.cardImg{
-		height: fit-content;
+		height: 700px;
 	}
 	.container-fluid{
 		height: 75%;
