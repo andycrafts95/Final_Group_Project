@@ -2,14 +2,14 @@ body{
     background-color: #6667ab;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
-.MessageBox{
+.messageBox{
     background-color: #6667ab;
     height: 92%;
 }
 .imageBox{
     position: relative;
     text-align: center;
-    color: aqua;
+    background-color: #6667ab;
 }
 .UpperRightExit{
     background-color: transparent;
@@ -20,7 +20,7 @@ body{
     right: 20%;
     left:60%;
 }
-#feed-image{
+#message-image{
     height: 100%
 }
 /* footer */
