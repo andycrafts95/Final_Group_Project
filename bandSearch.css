@@ -24,9 +24,10 @@ h3 {
 	font-size: 48px;
 }
 
-/* carousel */ 
+/* carousel 
 .scrolling-wrapper{
 	overflow-x: auto;
+	white-space: nowrap;
 	background-color: #6667ab;
 }
 h1{
@@ -74,6 +75,28 @@ h1{
 	width: 100%;
 	height: fit-content;
 }
+*/
+/* new carousel*/
+.carousel-item{
+	background-color: #6667ab;
+	display: flexbox;
+	align-items: center;
+	justify-content: center;
+
+}
+.imageBox{
+	background-color: #6667ab;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	height: 70%;
+	width: 50%;
+}
+
+.bandImg{
+	height: 500px;	
+	width: 9;
+}
 /* footer */
 h2 {
     font-size: 14px;
@@ -82,7 +105,7 @@ h2 {
 }
 .footerContainer{
 	border: none;
-    height: 150px;
+    height: 8%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -103,13 +126,13 @@ h2 {
 }
 @media only screen and (max-width: 750px){
 	.cardImg{
-		max-height: 400px;
-		max-width:200px;
+		height: fit-content;
 	}
 	.container-fluid{
-		padding-bottom: 20% ;
-	}
+		height: 75%;
 
+	}
+	
 }
 
 	
