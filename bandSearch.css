@@ -6,7 +6,7 @@ body{
     background-color: #6667ab;
 	display: flex;
 	justify-content: center;
-	padding: 5%;
+	padding: 6%;
 	height: 15%;
 }
 .filterBox{
@@ -126,7 +126,7 @@ h2 {
 .footerImg{
     height: 45px;
 }
-@media only screen and (max-width: 750px){
+@media only screen and (max-width: 775px){
 	.cardImg{
 		height: 700px;
 	}
