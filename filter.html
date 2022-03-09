@@ -85,7 +85,16 @@
 <!-- JQ Availabilty End -->
 
   </head>
-  <body style="background-color:#6667AB";>
+  <body style="background-color:#6667AB";
+
+  <section class="feedBox">
+    <div class="imageBox">
+      <img src="images/X.png" id="feed-image">
+      <a href="bandSearchIndex.html">
+        <div class="UpperRightExit">  </div>
+      </a>
+      </div>
+  </section>
 
 <!-- Search Start -->  
 <div class="container">
@@ -97,7 +106,7 @@
 <!-- Search End --> 
 
 <!-- Genre Start -->  
-<div class="container">
+<div class="containerG">
   <p>Music Genre</p>
   <div class="multiselect" id="appGenre">
     <div class="selected-hold" :class="{ focus: hasFocus }" 
@@ -140,7 +149,7 @@
 <!-- Genre End --> 
 
 <!-- Instrument Start -->  
-<div class="container">
+<div class="containerI">
   <p>Instrument Needed</p>
   <div class="multiselect" id="app">
     <div class="selected-hold" :class="{ focus: hasFocus }" 
@@ -266,5 +275,54 @@
 <!-- Availabilty End -->
         
 <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js'></script><script  src="js/jquery-weekdays.js"></script>
-  </body>
-  </html>
+
+
+  <!-- Button --> 
+  <section class="searchButton">
+    <div class="searchFooter">
+        <a href="bandSearchIndex.html">
+            <div>
+              <h3> Search </h3>
+            </div>
+        </a>
+    </div>
+  <!-- Button End -->  
+
+<!-- Footer -->
+<footer>
+  <div class="footerContainer">
+    <a href="bandProfile.html">
+      <div class="footerButton">
+        <img src="images/ProfileImg.png" class="footerImg">
+        <h2> Profile </h2>
+      </div>
+    </a>
+    <a href="feedindex.html">
+      <div class="footerButton">
+        <img src="images/FeedImg.png" class="footerImg">
+        <h2> Feed </h2>
+      </div>
+    </a>
+    <a href="index.html">
+      <div class="footerButton">
+        <img src="images/SearchImg.png" class="footerImg">
+        <h2> Search </h2>
+      </div>
+    </a>
+    <a href="messagesindex.html">
+      <div class="footerButton">
+        <img src="images/MessagesImg.png" class="footerImg">
+        <h2> Messages</h2>
+      </div>
+    </a>
+    <a href="connectionsIndex.html">
+      <div class="footerButton">
+        <img src="images/ConnectionsImg.png" class="footerImg">
+        <h2> Connections </h2>
+      </div>
+    </a>
+  </div>
+</footer>
+
+</body>
+</html>
