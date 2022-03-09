@@ -1,0 +1,243 @@
+p {
+    font-family: SF Pro;
+    font-weight: semibold;
+    color: white;
+  }
+
+label {
+    font-weight: 400;
+  }
+
+/* Genre */
+.search {
+    width: 345px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    height: 35px
+  }
+  .magnifyingGlass {
+      float: right;
+  }
+/* End of Genre */  
+
+/* Genre */
+#appGenre {
+    width: 345px;
+  }
+/* End of Genre */
+
+/* Instrument */
+  #app {
+    width: 345px;
+  }
+  .multiselect {
+    position: relative;
+  }
+  .multiselect .selected-hold {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0.3em 0 0 0.3em;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+  }
+  .multiselect .selected-hold.focus {
+    border-color: #66afe9;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  }
+  .multiselect .selected-item {
+    margin: 0 0.3em 0.3em 0;
+    padding: 0.1em 0.5em;
+    border-radius: 4px;
+    border: 1px solid #bfbfbf;
+    background-color: #e6e6e6;
+  }
+  .multiselect .selected-item .item-label {
+    margin-right: 0.5em;
+  }
+  .multiselect .selected-item .close {
+    outline: none;
+  }
+  .multiselect .selected-item.active {
+    border-color: #1d7ecc;
+  }
+  .multiselect .item-search {
+    width: 50px;
+    margin: 0 0.5em 0.5em 0;
+    border: none;
+    outline: none;
+  }
+  .multiselect .suggest-panel {
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    z-index: 10;
+    width: 100%;
+    max-height: 300px;
+    overflow: auto;
+    border: 1px solid #ccc;
+    background-color: #fff;
+  }
+  .multiselect .suggest-panel .suggest-item {
+    padding: 0.4em 0.8em;
+  }
+  .multiselect .suggest-panel .suggest-item.active {
+    background-color: #e6e6e6;
+  }
+  .multiselect .suggest-panel .suggest-item.disabled {
+    color: #999999;
+    text-decoration: line-through;
+  }
+  .multiselect .suggest-panel .suggest-item.highlight {
+    background-color: #ff0;
+  }
+  .multiselect .text-tester {
+    position: absolute;
+    visibility: hidden;
+    height: auto;
+    width: auto;
+    white-space: nowrap;
+  }
+/* End of Instrument */
+  
+  /* Distance */
+  
+  #slider .ui-slider-handle {
+    width: 47.91px;
+    height: 28.25px;
+    background: url("/images/slider-w.png") no-repeat;
+    border: none;
+    position: absolute;
+    top: -9px;
+  }
+  
+  #slider .ui-corner-all{
+    background-color: #D357F3;
+  }
+  
+  #distance-amount {
+    font-family: SF Pro;
+    font-size: large;
+  }
+  
+  /* End of Distance */
+  
+  /* Age Range */
+  
+  #slider-range .ui-slider-handle {
+    width: 47.91px;
+    height: 28.25px;
+    background: url("/images/slider-w.png") no-repeat;
+    border: none;
+    position: absolute;
+    top: -9px;
+  }
+  
+  #slider-range .ui-corner-all{
+    background-color: #D357F3;
+  }
+  
+  #amount {
+    font-family: SF Pro;
+    font-size: large;
+  }
+  
+  /* End of Age Range */
+  
+  /* Skill Level */
+  
+  #skill-slider .ui-slider-handle {
+    width: 47.91px;
+    height: 28.25px;
+    background: url("/images/slider-w.png") no-repeat;
+    border: none;
+    position: absolute;
+    top: -9px;
+  }
+  
+  #skill-slider .ui-corner-all{
+    background-color: #D357F3;
+  }
+  
+  #skill-level {
+    font-family: SF Pro;
+    font-size: large;
+  }
+  
+  /* End of Skill Level */
+  
+  /* Day Availability */
+
+  .day {
+    font-size: smaller;
+    }
+  
+  .day-of-week {
+    display: inline-block;
+    font-family: SF Pro;
+    color: white;
+  }
+  
+  .day-of-week input {
+    display: none
+  }
+  
+  .day-of-week input+label {
+    color: black;
+    background: white;
+    border: 1px solid black;
+    border-radius: 3px;
+    width: 2em;
+    text-align: center;
+    display: inline-block;
+    margin-right:.25em;
+  }
+  
+  .day-of-week input:checked+label {
+    color: white;
+    background: #D357F3;
+    border: 1px solid #3A088F;
+  }
+  [maxlength="5"]{width:5em}
+  
+  /* End of Day Availability */
+  
+  /* Night Availability */
+
+  .night {
+      font-size: smaller;
+  }
+  
+  .night-of-week {
+    display: inline-block;
+    font-family: SF Pro;
+    color: white;
+  }
+  
+  .night-of-week input {
+    display: none
+  }
+  
+  .night-of-week input+label {
+    color: black;
+    background: white;
+    border: 1px solid black;
+    border-radius: 3px;
+    width: 2em;
+    text-align: center;
+    display: inline-block;
+    margin-right:.25em;
+  }
+  
+  .night-of-week input:checked+label {
+    color: white;
+    background: #D357F3;
+    border: 1px solid #3A088F;
+  }
+  [maxlength="5"]{width:5em}
+  
+  /* End of Night Availability */
