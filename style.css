@@ -65,6 +65,7 @@ h2 {
 .footerContainer{
 	border: none;
     height: 8%;
+    padding: 10px;
     display: flex;
     flex-direction: row;
     justify-content: center;
