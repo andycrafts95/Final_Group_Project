@@ -25,7 +25,7 @@ h1{
 }
 /* search buttons */ 
 .big3Filter{
-    height: 70%;
+    height: 73%;
 }
 .filterBox{
     height: 100%;
@@ -86,9 +86,10 @@ h2 {
 }
 @media only screen and (max-width: 750px){
     .footerContainer{
-        height: 8%;
+        height: 100px;
         margin-left: 20px;
         margin-right: 20px;
+        bottom: 2%;
     }
 
 
