@@ -126,7 +126,7 @@ h2 {
 .footerImg{
     height: 45px;
 }
-@media only screen and (max-width: 750px){
+@media only screen and (max-width: 775px){
 	.cardImg{
 		height: 700px;
 	}
