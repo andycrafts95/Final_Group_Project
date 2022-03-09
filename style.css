@@ -43,6 +43,7 @@ h1{
     position: relative;
     justify-content: center;
     margin: 30px;
+    text-align: center;
 }
 .buttonTitle{
     position: absolute;
