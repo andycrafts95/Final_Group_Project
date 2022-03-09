@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<!-- BS/JQ Dropdowns -->     
+  <meta charset="UTF-8">
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'><link 
+  rel="stylesheet" 
+  href="css/filter.css">       
+
+<!-- BS/JQ Dropdowns End -->  
+
+<!-- JQ Sliders Start -->  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Slider - Range slider</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+
+<!-- JQ Distanance Slider Start --> 
+  <script>
+    $( function() {
+      var j=jQuery.noConflict();
+      $( "#slider" ).slider({
+        range: "min",
+        min: 0,
+        max: 100,
+        value: 50,
+        slide: function( event, ui ) {
+          $( "#distance-amount" ).val( ui.value );
+        }
+      });
+      $( "#distance-amount" ).val( $( "#slider" ).slider( "value" ) );
+    } );
+  </script>
+<!-- JQ Distanance Slider End -->
+
+<!-- JQ Range Slider Start --> 
+  <script>
+      $( function() {
+        var j=jQuery.noConflict();
+        $( "#slider-range" ).slider({
+          range: true,
+          min: 15,
+          max: 75,
+          values: [ 25, 45 ],
+          slide: function( event, ui ) {
+            $( "#amount" ).val( "" + ui.values[ 0 ] + " - " + ui.values[ 1 ] );
+          }
+        });
+        $( "#amount" ).val( "" + $( "#slider-range" ).slider( "values", 0 ) +
+          " - " + $( "#slider-range" ).slider( "values", 1 ) );
+      } );
+  </script>
+<!-- JQ Range Slider End -->  
+
+<!-- JQ Skill Level Slider Start --> 
+<script>
+  $( function() {
+    var j=jQuery.noConflict();
+    $( "#skill-slider" ).slider({
+      range: "min",
+      min: 0,
+      max: 10,
+      value: 5,
+      slide: function( event, ui ) {
+        $( "#skill-level" ).val( ui.value );
+      }
+    });
+    $( "#skill-level" ).val( $( "#skill-slider" ).slider( "value" ) );
+  } );
+</script>
+<!-- JQ Skill Level Slider End -->
+
+<!-- JQ Availabilty Start -->
+    <title>MusiConn</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" type="text/css" rel="stylesheet" />
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous">
+      </script>
+    <script src="src/jquery-weekdays.js"></script>
+<!-- JQ Availabilty End -->
+
+  </head>
+  <body style="background-color:#6667AB";>
+
+<!-- Search Start -->  
+<div class="container">
+  <p>Search Band Name</p>
+  <div class="search">
+    <img src="/images/MagnifyingGlass.png" class="magnifyingGlass"/>
+  </div>
+  <br>
+<!-- Search End --> 
+
+<!-- Genre Start -->  
+<div class="container">
+  <p>Music Genre</p>
+  <div class="multiselect" id="appGenre">
+    <div class="selected-hold" :class="{ focus: hasFocus }" 
+          @click.self="$refs.search.focus()" 
+          @keydown.left="traverseSelected('left')"
+          @keydown.right="traverseSelected('right')"
+          @keyup.delete="traverseSelectedDelete">
+          <div class="selected-item"
+            :class="{ active: activeHorizontal === index }"
+            v-for="(itm, index) in selectedList" 
+            :key="index">
+            <span class="item-label">{{ itm }}</span>
+            <button type="button" class="close" @click="removeSelected(index)" tabindex="-1">
+              <span>&times;</span>
+            </button>
+          </div>
+          <input type="text" class="item-search" ref="search"
+            :style="{ width: searchTermWidth }"
+            v-model.trim="searchTerm"
+            @keydown.down="traverseList('next')"
+            @keydown.up="traverseList('prev')"
+            @keydown.delete="backspaceDelete"
+            @keyup.enter="addActive"
+            @keyup="lastTerm = searchTerm"
+            @focus="showSuggestPanel = true; hasFocus = true; activeHorizontal = -1"
+            @blur="showSuggestPanel = false; hasFocus = false">
+          <div ref="tester" class="text-tester">{{ searchTerm }}</div>
+          <div class="suggest-panel" v-show="showSuggestPanel" ref="panel">
+            <div class="suggest-item" 
+                :class="{ active: activeVertical === index, disabled: selectedList.includes(row.value || row) }"
+                v-for="(row, index) in filteredSuggest" 
+                :key="index"
+                @mousedown.prevent="addSelected(row.value || row)"
+                @mouseover="activeVertical = index" v-html="hightlightWord(row)"></div>
+          </div>
+        </div>
+  </div>
+  <br>
+  </div> 
+<!-- Genre End --> 
+
+<!-- Instrument Start -->  
+<div class="container">
+  <p>Instrument Needed</p>
+  <div class="multiselect" id="app">
+    <div class="selected-hold" :class="{ focus: hasFocus }" 
+          @click.self="$refs.search.focus()" 
+          @keydown.left="traverseSelected('left')"
+          @keydown.right="traverseSelected('right')"
+          @keyup.delete="traverseSelectedDelete">
+          <div class="selected-item"
+            :class="{ active: activeHorizontal === index }"
+            v-for="(itm, index) in selectedList" 
+            :key="index">
+            <span class="item-label">{{ itm }}</span>
+            <button type="button" class="close" @click="removeSelected(index)" tabindex="-1">
+              <span>&times;</span>
+            </button>
+          </div>
+          <input type="text" class="item-search" ref="search"
+            :style="{ width: searchTermWidth }"
+            v-model.trim="searchTerm"
+            @keydown.down="traverseList('next')"
+            @keydown.up="traverseList('prev')"
+            @keydown.delete="backspaceDelete"
+            @keyup.enter="addActive"
+            @keyup="lastTerm = searchTerm"
+            @focus="showSuggestPanel = true; hasFocus = true; activeHorizontal = -1"
+            @blur="showSuggestPanel = false; hasFocus = false">
+          <div ref="tester" class="text-tester">{{ searchTerm }}</div>
+          <div class="suggest-panel" v-show="showSuggestPanel" ref="panel">
+            <div class="suggest-item" 
+                :class="{ active: activeVertical === index, disabled: selectedList.includes(row.value || row) }"
+                v-for="(row, index) in filteredSuggest" 
+                :key="index"
+                @mousedown.prevent="addSelected(row.value || row)"
+                @mouseover="activeVertical = index" v-html="hightlightWord(row)"></div>
+          </div>
+        </div>
+  </div>
+  <br>
+  </div> 
+<!-- Instrument End --> 
+
+<!-- Distance Slider Start -->  
+<div class="distance">
+  <p>
+    <label for="amount">Max Distance to Me (in miles):&nbsp;</label>
+    <input type="text" id="distance-amount" style="border:0; color:white; background-color:#6667AB; font-weight:bold;">
+  </p>
+  <div id="slider" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+  </div>
+  <br>  
+  </div>
+<!-- Distance Slider End -->     
+
+<!-- Range Slider Start -->  
+<div>
+      <p>
+        <label for="amount">Age Range:&nbsp;</label>
+        <input type="text" id="amount" style="border:0; color:white; background-color:#6667AB; font-weight:bold;">
+      </p>
+      
+      <div id="slider-range" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+        
+        <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 15.2%;"></span>
+        <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 64.4%;"></span>
+      </div>
+      <br>
+    </div>
+<!-- Range Slider End --> 
+
+<!-- Skill Level Slider Start -->     
+<div>
+<p>
+  <label for="amount">Skill Level (1-10):&nbsp;</label>
+  <input type="text" id="skill-level" style="border:0; color:white; background-color:#6667AB; font-weight:bold;">
+</p>
+<div id="skill-slider" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+</div>
+<br>
+</div>
+<!-- Skill Level Slider End -->  
+
+<!-- Availabilty Start -->
+      <p>
+        Availability
+      </p>
+      <div class="day-of-week">
+        <span class="day">DAY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <input id="DOW_1-0" type="checkbox" name="weekday" value="0">
+        <label for="DOW_1-0">S</label>
+        <input id="DOW_1-1" type="checkbox" name="weekday" value="1">
+        <label for="DOW_1-1">M</label>
+        <input id="DOW_1-2" type="checkbox" name="weekday" value="2">
+        <label for="DOW_1-2">T</label>
+        <input id="DOW_1-3" type="checkbox" name="weekday" value="3">
+        <label for="DOW_1-3">W</label>
+        <input id="DOW_1-4" type="checkbox" name="weekday" value="4">
+        <label for="DOW_1-4">Th</label>
+        <input id="DOW_1-5" type="checkbox" name="weekday" value="5">
+        <label for="DOW_1-5">F</label>
+        <input id="DOW_1-6" type="checkbox" name="weekday" value="6">
+        <label for="DOW_1-6">S</label>
+      </div>
+<p> 
+
+</p>
+      <div class="night-of-week">
+        <span class="night">NIGHT&nbsp;&nbsp;</span>
+        <input id="NOW_1-0" type="checkbox" name="weekday" value="0">
+        <label for="NOW_1-0">S</label>
+        <input id="NOW_1-1" type="checkbox" name="weekday" value="1">
+        <label for="NOW_1-1">M</label>
+        <input id="NOW_1-2" type="checkbox" name="weekday" value="2">
+        <label for="NOW_1-2">T</label>
+        <input id="NOW_1-3" type="checkbox" name="weekday" value="3">
+        <label for="NOW_1-3">W</label>
+        <input id="NOW_1-4" type="checkbox" name="weekday" value="4">
+        <label for="NOW_1-4">Th</label>
+        <input id="NOW_1-5" type="checkbox" name="weekday" value="5">
+        <label for="NOW_1-5">F</label>
+        <input id="NOW_1-6" type="checkbox" name="weekday" value="6">
+        <label for="NOW_1-6">S</label>
+      </div>
+<!-- Availabilty End -->
+        
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js'></script><script  src="js/jquery-weekdays.js"></script>
+  </body>
+  </html>
