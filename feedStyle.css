@@ -54,6 +54,7 @@ h2 {
 @media only screen and (max-width: 750px){
     .footerContainer{
         height: 100px;
+        padding-bottom: 5%;
     }
     .imageBox{
         scale: 90%;
