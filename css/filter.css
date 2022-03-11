@@ -130,7 +130,7 @@ label {
   #slider .ui-slider-handle {
     width: 47.91px;
     height: 28.25px;
-    background: url("/images/slider-w.png") no-repeat;
+    background: url("../images/slider-w.png") no-repeat;
     border: none;
     position: absolute;
     top: -9px;
@@ -152,7 +152,7 @@ label {
   #slider-range .ui-slider-handle {
     width: 47.91px;
     height: 28.25px;
-    background: url("/images/slider-w.png") no-repeat;
+    background: url("../images/slider-w.png") no-repeat;
     border: none;
     position: absolute;
     top: -9px;
@@ -174,7 +174,7 @@ label {
   #skill-slider .ui-slider-handle {
     width: 47.91px;
     height: 28.25px;
-    background: url("/images/slider-w.png") no-repeat;
+    background: url("../images/slider-w.png") no-repeat;
     border: none;
     position: absolute;
     top: -9px;
